@@ -28,6 +28,7 @@
 
 #include <inttypes.h>
 #include <stdint.h>
+#include <stdio.h>
 #include <poll.h>
 #include <errno.h>
 #include <string.h>
@@ -290,7 +291,7 @@ int epoll_ctl(int epfd, int op, int fd, struct epoll_event *ev)
   switch (op)
     {
       case EPOLL_CTL_ADD:
-        finfo("%08x CTL ADD(%d): fd=%d ev=%08" PRIx32 "\n",
+        printf("%08x CTL ADD(%d): fd=%d ev=%08" PRIx32 "\n",
               epfd, eph->occupied, fd, ev->events);
         if (eph->occupied >= eph->size)
           {
