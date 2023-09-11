@@ -424,6 +424,7 @@ void arm_addregion(void);
 
 #if defined(CONFIG_NET) && !defined(CONFIG_NETDEV_LATEINIT)
 void arm_netinitialize(void);
+void arm_cannetinitialize(void);
 #else
 # define arm_netinitialize()
 #endif

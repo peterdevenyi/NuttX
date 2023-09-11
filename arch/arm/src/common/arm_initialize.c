@@ -126,6 +126,8 @@ void up_initialize(void)
 
   arm_netinitialize();
 
+  arm_netcaninitialize();
+
 #if defined(CONFIG_USBDEV) || defined(CONFIG_USBHOST)
   /* Initialize USB -- device and/or host */
 
