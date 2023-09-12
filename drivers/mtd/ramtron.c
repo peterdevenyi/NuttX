@@ -68,10 +68,8 @@
  *  For purpose of the VFAT file system we emulate the following
  *  configuration:
  */
-#ifdef CONFIG_RAMTRON_EMULATE_SECTOR_SHIFT
-#define RAMTRON_EMULATE_SECTOR_SHIFT  CONFIG_RAMTRON_EMULATE_SECTOR_SHIFT
-#endif
-#define RAMTRON_EMULATE_PAGE_SHIFT    CONFIG_RAMTRON_EMULATE_PAGE_SHIFT
+#define RAMTRON_EMULATE_SECTOR_SHIFT  9
+#define RAMTRON_EMULATE_PAGE_SHIFT    9
 #define RAMTRON_EMULATE_PAGE_SIZE     (1 << RAMTRON_EMULATE_PAGE_SHIFT)
 
 /* RAMTRON Identification register values */
