@@ -126,7 +126,9 @@ void up_initialize(void)
 
   arm_netinitialize();
 
+#if defined(CONFIG_STM32F7_CAN1) || defined(CONFIG_STM32F7_CAN2)
   arm_netcaninitialize();
+#endif
 
 #if defined(CONFIG_USBDEV) || defined(CONFIG_USBHOST)
   /* Initialize USB -- device and/or host */
